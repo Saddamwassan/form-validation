@@ -64,7 +64,8 @@ function validateMessage(){
 }
 // validating form
 document.getElementById("submitbtn").addEventListener("click",validateForm);
-function validateForm(){
+function validateForm(e){
+    e.preventDefault();
 if(!validateName()||!validateEmail()||!validatePhone()||!validateMessage()){
     submitError.style.display = "block";
     submitError.innerHTML= "Fill the form properly.";
